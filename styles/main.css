@@ -2,41 +2,57 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background: #ffc600;
-  font-family: "helvetica neue";
-  font-size: 20px;
-  font-weight: 200;
 }
 
-input {
-  width: 100%;
-  padding: 20px;
+:root {
+  --raisin-black: #222021ff;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --text-color: white;
+  --ebony: #4e534bff;
+  --lion: #c09f86ff;
+  --reseda-green: #6f7865ff;
+  --beaver: #9a856fff;
+  font-family: "Poppins", sans-serif;
 }
 
-.search-form {
+.body {
+  background-image: url(../img/pexels-mihis-alex-21014.jpg);
+  background-size: cover;
+}
+
+.form {
   max-width: 400px;
   margin: 50px auto;
 }
 
-input.search {
-  margin: 0;
-  text-align: center;
-  outline: 0;
-  border: 10px solid #f7f7f7;
-  width: 120%;
-  left: -10%;
+.search_input {
+  /*position*/
   position: relative;
+  left: -10%;
   top: 10px;
   z-index: 2;
-  border-radius: 5px;
-  font-size: 40px;
+  /*general*/
+  width: 120%;
+  padding: 8px 0;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 15px;
+  border: 10px solid var(--ebony);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+  background-color: var(--shadow-color);
+  box-shadow: 0 0 1rem var(--reseda-green);
+  color: var(--shadow-color);
+}
+
+::placeholder {
+  color: var(--shadow-color);
 }
 
 .suggestions {
   margin: 0;
   padding: 0;
   position: relative;
+  color: var(--ebony);
   /*perspective: 20px;*/
 }
 

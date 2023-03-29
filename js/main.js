@@ -1,7 +1,7 @@
 "use strict";
 
 //-------------------CONST-------------------
-const searchInput = document.querySelector(".search");
+const searchInput = document.querySelector(".search_input");
 const suggestions = document.querySelector(".suggestions");
 
 let cities = [];
@@ -21,6 +21,7 @@ function getCities() {
 getCities();
 
 //
+
 function findMatches(wordToMatch, cities) {
   return cities.filter((place) => {
     // here we need to figure out if the city or state matches what was searched
@@ -54,9 +55,17 @@ function displayMatches() {
     `;
     })
     .join("");
-  suggestions.innerHTML = html;
+  if (this.value === "") {
+    return (suggestions.innerHTML =
+      " <li>Filter for a city</li> <li>or a state</li>");
+  } else {
+    return html.length !== 0
+      ? (suggestions.innerHTML = html)
+      : (suggestions.innerHTML = `<p>Sorry, no results were found for <span class="hl">${this.value}</span></p>`);
+  }
 }
 
 //-------------------EVENTS-------------------
 
-searchInput.addEventListener("input", displayMatches);
+searchInput.addEventListener("change", displayMatches);
+searchInput.addEventListener("keyup", displayMatches);
