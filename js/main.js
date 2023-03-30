@@ -61,7 +61,7 @@ function displayMatches() {
   } else {
     return html.length !== 0
       ? (suggestions.innerHTML = html)
-      : (suggestions.innerHTML = `<p>Sorry, no results were found for <span class="hl">${this.value}</span></p>`);
+      : (suggestions.innerHTML = `<p class="error">Sorry, no results were found for <span class="hl">${this.value}</span></p>`);
   }
 }
 

@@ -18,6 +18,7 @@
 .body {
   background-image: url(../img/pexels-mihis-alex-21014.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .form {
@@ -85,4 +86,10 @@ span.population {
 
 .hl {
   background: #ffc600;
+}
+
+.error {
+  text-align: center;
+  font-size: 20px;
+  padding: 40px 0;
 }
