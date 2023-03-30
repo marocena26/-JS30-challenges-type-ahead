@@ -54,7 +54,6 @@
   padding: 0;
   position: relative;
   color: var(--ebony);
-  /*perspective: 20px;*/
 }
 
 .suggestions li {
